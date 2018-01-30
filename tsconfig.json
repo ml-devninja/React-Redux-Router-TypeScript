@@ -1,0 +1,43 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "outDir": "./build/dist",
+    "module": "es2015",
+    "target": "es5",
+    "lib": [
+      "es6",
+      "dom",
+      "es2015",
+      "es2015.core",
+      "es2015.promise"
+    ],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "strict": true,
+    "strictFunctionTypes": false, // this needs to be turned off for the time-bing due to the following issue: https://github.com/reactjs/redux/issues/2709
+    "noImplicitAny": false,
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "baseUrl": ".",
+    "paths": {
+      "@components/*": ["src/components/*"],
+      "@containers/*": ["src/containers/*"]
+    }
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
+  ]
+}
