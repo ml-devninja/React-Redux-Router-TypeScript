@@ -37,27 +37,34 @@ class AddNewCar extends React.Component<Props, CarEntry> {
   public render(): JSX.Element {
     return (
       <div>
-        <input type="number" onChange={this.setValue.bind(this, "id", true)} />
+        <input type="number"
+               placeholder={'ID'}
+               onChange={this.setValue.bind(this, "id", true)} />
         <input
           type="text"
+          placeholder={"Manufacturer"}
           onChange={this.setValue.bind(this, "car_make", false)}
-        />
+        /><br/>
         <input
           type="text"
+          placeholder={"Model"}
           onChange={this.setValue.bind(this, "car_model", false)}
         />
         <input
-          type="text"
+          type="number"
+          placeholder={"Year"}
           onChange={this.setValue.bind(this, "car_year", true)}
-        />
+        /><br/>
         <input
           type="text"
+          placeholder={"Color"}
           onChange={this.setValue.bind(this, "car_color", false)}
         />
         <input
           type="text"
+          placeholder={'Image src'}
           onChange={this.setValue.bind(this, "car_image", false)}
-        />
+        /><br/>
           <button onClick={this.saveCar} >Save</button>
       </div>
     );
